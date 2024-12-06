@@ -1,6 +1,8 @@
 module github.com/netbirdio/netbird
 
-go 1.23.0
+go 1.23.1
+
+toolchain go1.23.3
 
 require (
 	cunicu.li/go-rosenpass v0.4.0
@@ -36,6 +38,7 @@ require (
 	github.com/c-robinson/iplib v1.0.3
 	github.com/caddyserver/certmagic v0.21.3
 	github.com/cilium/ebpf v0.15.0
+	github.com/coder/websocket v1.8.12
 	github.com/coreos/go-iptables v0.7.0
 	github.com/creack/pty v1.1.18
 	github.com/davecgh/go-spew v1.1.1
@@ -43,7 +46,7 @@ require (
 	github.com/fsnotify/fsnotify v1.7.0
 	github.com/gliderlabs/ssh v0.3.4
 	github.com/godbus/dbus/v5 v5.1.0
-	github.com/golang/mock v1.6.0
+	github.com/golang/mock v1.7.0-rc.1
 	github.com/google/go-cmp v0.6.0
 	github.com/google/gopacket v1.1.19
 	github.com/google/nftables v0.2.0
@@ -91,7 +94,7 @@ require (
 	golang.org/x/exp v0.0.0-20240506185415-9bf2ced13842
 	golang.org/x/mobile v0.0.0-20231127183840-76ac6878050a
 	golang.org/x/net v0.30.0
-	golang.org/x/oauth2 v0.19.0
+	golang.org/x/oauth2 v0.23.0
 	golang.org/x/sync v0.8.0
 	golang.org/x/term v0.25.0
 	google.golang.org/api v0.177.0
@@ -99,7 +102,6 @@ require (
 	gorm.io/driver/postgres v1.5.7
 	gorm.io/driver/sqlite v1.5.3
 	gorm.io/gorm v1.25.7-0.20240204074919-46816ad31dde
-	nhooyr.io/websocket v1.8.11
 )
 
 require (
@@ -108,7 +110,7 @@ require (
 	cloud.google.com/go/compute/metadata v0.3.0 // indirect
 	dario.cat/mergo v1.0.0 // indirect
 	github.com/Azure/go-ansiterm v0.0.0-20230124172434-306776ec8161 // indirect
-	github.com/BurntSushi/toml v1.4.0 // indirect
+	github.com/BurntSushi/toml v1.4.1-0.20240526193622-a339e1f7089c // indirect
 	github.com/Microsoft/go-winio v0.6.2 // indirect
 	github.com/Microsoft/hcsshim v0.12.3 // indirect
 	github.com/XiaoMi/pegasus-go-client v0.0.0-20210427083443-f3b6b08bc4c2 // indirect
@@ -218,10 +220,10 @@ require (
 	go.opentelemetry.io/otel/trace v1.26.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	golang.org/x/image v0.18.0 // indirect
-	golang.org/x/mod v0.17.0 // indirect
+	golang.org/x/mod v0.21.0 // indirect
 	golang.org/x/text v0.19.0 // indirect
-	golang.org/x/time v0.5.0 // indirect
-	golang.org/x/tools v0.21.1-0.20240508182429-e35e4ccd0d2d // indirect
+	golang.org/x/time v0.7.0 // indirect
+	golang.org/x/tools v0.26.0 // indirect
 	golang.zx2c4.com/wintun v0.0.0-20230126152724-0fa3db229ce2 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20240509183442-62759503f434 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20240903143218-8af14fe29dc1 // indirect
@@ -243,3 +245,7 @@ replace github.com/cloudflare/circl => github.com/cunicu/circl v0.0.0-2023080111
 replace github.com/pion/ice/v3 => github.com/netbirdio/ice/v3 v3.0.0-20240315174635-e72a50fcb64e
 
 replace github.com/libp2p/go-netroute => github.com/netbirdio/go-netroute v0.0.0-20240611143515-f59b0e1d3944
+
+replace nhooyr.io/websocket v1.8.11 => github.com/coder/websocket v1.8.12
+
+replace gvisor.dev/gvisor v0.0.0-20231020174304-b8a429915ff1 => gvisor.dev/gvisor v0.0.0-20241205222027-1a41c298e490
